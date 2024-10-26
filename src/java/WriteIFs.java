@@ -2,8 +2,8 @@
 /**
  * Write a description of class src.main.java.WriteIFs here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (ulasyakut)
+ * @version (10/25/2024)
  */
 public class WriteIFs
 {
@@ -14,14 +14,17 @@ public class WriteIFs
      
     }
     
-    public String thermoSTAT(int room) {
+    public Object thermoSTAT(int room) {
+
+        if (70 > room) {
+
+            return heatOn();
+        }   else {
+            return coolOn();
+        }
         // Write an IF statement that checks the 
         // “temperature(room)” and if that check is less than 70, 
         // calls “heatOn()” else calls “coolOn()”
-
-
-        
-        return this.ss;
     }
 
     public void fireplaceControl(Object fireplace1) {
@@ -75,11 +78,13 @@ public class WriteIFs
     private int tempurature(int t) {
         return t+2;
     }
-    private void heatOn() {
+    private String heatOn() {
         this.ss = "heating";
+        return this.ss;
     }
-    private void coolOn() {
+    private Object coolOn() {
         this.ss = "cooling";
+        return this.ss;
     }
  
     private int insideTemp() {
