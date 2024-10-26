@@ -28,7 +28,13 @@ public class WriteIFs
     }
 
     public void fireplaceControl(Object fireplace1) {
-        // Write an IF statement that checks 
+
+        if( oo2 < 50 && oo1 < 62){
+
+            startAFire();
+        }
+        //inside oo1 outside oo2
+        // Write an IF statement that checks
         // “outsideTemp()” is less than 50 
         // AND 
         // “insideTemp()” is less than 62, 
@@ -43,7 +49,7 @@ public class WriteIFs
     }
 
 
-    
+
     /**
      *  Pay no attention to the code below this point.
      *
@@ -93,7 +99,7 @@ public class WriteIFs
     private int outsideTemp() {
         return oo2;
     }
-    private void startAFire(Object o) {
+    private void startAFire() {
         this.tt_s = 213;
     }
     private void refuel() {
@@ -102,4 +108,5 @@ public class WriteIFs
     private void displayGameOver(boolean b) {
         this.ss = "Game Over!";
     }
+
 }

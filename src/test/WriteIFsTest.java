@@ -98,7 +98,7 @@ public class WriteIFsTest
         assertEquals(1, writeIFs1.tt_s);
     }
     @Test
-    public void TestFireControl3()
+    public void TestFireControl3() 
     {
         WriteIFs writeIFs1 = new WriteIFs();
         Object oo = new Object();
