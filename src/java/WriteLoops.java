@@ -14,46 +14,38 @@ public class WriteLoops {
 
     public int oneToFive() {
         int w = 0;
-
-        // Write a FOR loop that counts from 1 to 10.
-            // calling
+        while(w < 5){
             w = w + 1;
-            // each time through the loop
-
-        // this will tell the test how many times the loop executed.
+        }
         return w;
     }
 
     public int oneToTen() {
         int w = 0;
-
-        // Write a FOR loop that counts from 1 to 10.
-        // calling
-        w = w + 1;
-        // each time through the loop
-        
+        while(w < 10){
+            w = w + 1;
+        }
         return w;
     }
 
     public int startAtTwentyOne() {
-        int w = 0;
-
-        // Write a FOR loop that makes 10 iterations, start at 21.
-        // calling
-        w = w + 1;
-        // each time through the loop
-        
+        int w = 21;
+        int n = 0;
+        while (n < 10){
+            w = w - 1;
+            n++;
+        }
         return w;
     }
 
     public int countDown() {
-        int w = 0;
+        int w = 100;
+        int n = 0;
+        while (n < 100){
+            w = w - 1;
+            n++;
 
-        // Write a FOR loop that counts down from 100 to 0.
-        // calling
-        w = w + 1;
-        // each time through the loop
-        
+        }
         return w;
     }
 
