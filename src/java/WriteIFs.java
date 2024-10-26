@@ -9,11 +9,16 @@ public class WriteIFs
 {
  
     public void playerDied(boolean player1) {
+
+        if(!isAlive(player1)){
+            displayGameOver(true);
+        }
         // Write an IF statement that checks “player1.isAlive()” 
         // and if that’s false, calls “displayGameOver(player1)”
      
     }
-    
+
+
     public Object thermoSTAT(int room) {
 
         if (70 > room) {
@@ -43,6 +48,10 @@ public class WriteIFs
     }
 
     public void checkFuel(double fuelLevel) {
+
+        if(fuelLevel < 0.08){
+             refuel();
+        }
         // Write an IF statement that checks “fuelLevel” 
         // and if that check is less than 0.08, calls “refuel()”
 
@@ -107,6 +116,7 @@ public class WriteIFs
     }
     private void displayGameOver(boolean b) {
         this.ss = "Game Over!";
+
     }
 
 }
