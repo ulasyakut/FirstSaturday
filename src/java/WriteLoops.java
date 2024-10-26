@@ -39,61 +39,62 @@ public class WriteLoops {
     }
 
     public int countDown() {
-        int w = 100;
-        int n = 0;
-        while (n < 100){
-            w = w - 1;
-            n++;
+        int n = 100;
+        int w = 0;
+        while (n > 0){
+            n = n - 1;
+            w++;
 
         }
         return w;
     }
-
-    public int byTwoTo32() {
-        int w = 0;
-
+        //i moved on this since it says some error things
+//    public int byTwoTo32() {
+//        int w = 0;
+//        for(int i = 0;w < 32;i++){
+//            if(i % 2 == 0){
+//                w = w + 1;
+//                return i;
+//                 }       }return w;
+//        }
         // Write a FOR loop from 0 to 32 by 2s.
         // calling
-        w = w + 1;
-        // each time through the loop
-        return w;
-    }
 
-    public int countDownFrom5000() {
-        int w = 0;
-
-        // Write a FOR loop from 1 to less than 5001 by 11s.
-        // calling
-        w = w + 1;
         // each time through the loop
-        
-        return w;
-    }
+
+    //}
+
+//    public int countDownFrom5000() {
+//        int w = 0;
+//        int num = 0;
+//        while (num < 5001){
+//            num = num + 11;
+//
+//        // Write a FOR loop from 1 to less than 5001 by 11s.
+//        // calling
+//        w = w + 1;
+//        // each time through the loop
+//
+//        return w;
+//    }
 
     public int nestedFors() {
         int w = 0;
-
-        // Write a nested FOR loop(s), where one counts from
-        // 0 to less than 20 and the inner one counts from 0 to 4
-                // calling
-                w = w + 1;
-                // each time through the inner loop
-
+        for(int i = 0; i < 20; i++){
+            for(int n = 0; n <= 4; n++){
+                w = w + 1;}
+        }
         return w;
     }
 
     public int helloZipCode() {
         int w = 0;
-
-        // Write a FOR loop that counts from 5 to 105. Put an IF
-        // statement inside the loop that checks the
-        // loop index counter and if it’s greater than 51,
-        // prints “Hello Zipcode” instead of the statement w = w + 1;
-
-                // calling
-                w = w + 1;
-            // each time through the inner loop
-        
+        for(int i=5;i<=105;i++){
+            if(i>51){
+                System.out.println("Hello Zipcode");
+            }
+            else{w = w + 1;}
+        }
         return w;
     }
 
@@ -115,20 +116,14 @@ public class WriteLoops {
         // what's the primary difference between them?!?
     }
 
-    // Write a WHILE loop that checks “gpsCurrentLocation()”
-    // and if that is not equal to “Home” then and it calls “driveSomeMore()”.
-    // After the loop is done, print “Honey, I’m Home!”
+
     public int driveHome() {
         int w = 0;
-
-        // you need to use a .equals for two Strings.
-
-            // calling
+        while(!gpsCurrentLocation().equals("Home")){
+            driveSomeMore();
             w = w + 1;
-            // each time through the inner loop
-        
-
-            return w;
+        }
+        return w;
     }
 
     // Getting harder...
@@ -144,11 +139,11 @@ public class WriteLoops {
         int runningScore = 0;
 
         // do your while loop here
- 
+
             // calling
             w = w + 1;
             // each time through the inner loop
-        
+
         return w; // >= 3;
     }
 
@@ -176,12 +171,12 @@ public class WriteLoops {
     public int checkServerStatus() {
         int w = 0;
         String adminPhoneNumber = "+1 202 456 1111";
-        
+
 
         // calling
         w = w + 1;
         // each time through the inner loop
-        
+
         return w;
     }
 
@@ -195,7 +190,7 @@ public class WriteLoops {
             // calling
             w = w + 1;
             // each time through the inner loop
-        
+
         return w;
     }
 
@@ -228,11 +223,11 @@ public class WriteLoops {
         int w = 0;
         int sumOfThrees = 0;
 
- 
+
             // calling
             w = w + 1;
             // each time through the inner loop
-        
+
         System.out.print("The Sum is ");
         System.out.println(sumOfThrees);
 
@@ -245,11 +240,11 @@ public class WriteLoops {
         int w = 0;
         int sumOfThrees = 0;
 
- 
+
             // calling
             w = w + 1;
             // each time through the inner loop
-        
+
         System.out.print("The Sum is ");
         System.out.println(sumOfThrees);
 
@@ -268,11 +263,11 @@ public class WriteLoops {
         boolean onTime = true;
 
         // ADD YOUR CODE here.
- 
+
             // be sure to call
             w = w + 1;
             // each time inside the loop
-        
+
         return w;
     }
 
@@ -285,11 +280,11 @@ public class WriteLoops {
         int w = 0;
         int numberOfVotes = voteTallies.length;
 
- 
+
             // calling
             w = w + 1;
             // each time through the inner loop
-        
+
         return w;
     }
 
@@ -304,7 +299,7 @@ public class WriteLoops {
             // calling
             w = w + 1;
             // each time through the inner loop
-        
+
         return w;
     }
 
@@ -395,5 +390,6 @@ public class WriteLoops {
     private void waitFor(int interval) {
         serverStatus += interval;
     }
+
 
 }
