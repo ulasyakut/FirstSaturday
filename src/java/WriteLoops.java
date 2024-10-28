@@ -48,7 +48,7 @@ public class WriteLoops {
         }
         return w;
     }
-        //i moved on this since it says some error things
+//        //i moved on this since it says some error things
 //    public int byTwoTo32() {
 //        int w = 0;
 //        for(int i = 0;w < 32;i++){
@@ -57,26 +57,25 @@ public class WriteLoops {
 //                return i;
 //                 }       }return w;
 //        }
-        // Write a FOR loop from 0 to 32 by 2s.
-        // calling
-
-        // each time through the loop
-
-    //}
-
-//    public int countDownFrom5000() {
-//        int w = 0;
-//        int num = 0;
-//        while (num < 5001){
-//            num = num + 11;
+//         //Write a FOR loop from 0 to 32 by 2s.
+//         //calling
 //
-//        // Write a FOR loop from 1 to less than 5001 by 11s.
-//        // calling
-//        w = w + 1;
-//        // each time through the loop
+//         //each time through the loop
 //
-//        return w;
 //    }
+
+    public int countDownFrom5000() {
+        int w = 0;
+
+        while (w*11 < 5001) {
+
+            // Write a FOR loop from 1 to less than 5001 by 11s.
+            // calling
+            w = w + 1;
+            // each time through the loop
+        }
+        return w;
+    }
 
     public int nestedFors() {
         int w = 0;
@@ -138,45 +137,55 @@ public class WriteLoops {
         int currentScore = gameNextScore();
         int runningScore = 0;
 
-        // do your while loop here
-
-            // calling
+        // gameNextScore() generates outside of its boundaries
+        //test method doesnt make sense??
+        while(runningScore<highestScore){
+            System.out.println(runningScore+"running score");
+            System.out.println(currentScore+"current score");
+            runningScore = runningScore+currentScore;
+            System.out.println(runningScore+"running score after sum");
+            currentScore = gameNextScore();
             w = w + 1;
-            // each time through the inner loop
-
-        return w; // >= 3;
+            System.out.println("------------");
+        }
+        return w;
     }
 
     // Rewrite the previous WHILE loop as a DO..WHILE loop.
     // Notice how the “runningScore” variable usage is different.
     public boolean checkGameScoreDoWhile() {
         int w = 0;
+
         int highestScore = 236;
         int currentScore = gameNextScore();
         int runningScore = 0;
+        do{
+            runningScore = runningScore+currentScore;
+            w = w + 1;
+        }
+        while(currentScore<highestScore);
 
         // do your while loop here
 
             // calling
-            w = w + 1;
+
             // each time through the inner loop
 
         return w >= 3;
     }
 
-    // Write a WHILE loop that checks “serverIsRunning()” and if true
-    // calls “waitFor(5)” After the loop, write an IF and check “serverIsRunning()”
-    // is false, and if so, call “sendEmergencyText(“Help!”, adminPhoneNumber)”
-    // and also calls “tryServerRestart()”
     public int checkServerStatus() {
         int w = 0;
         String adminPhoneNumber = "+1 202 456 1111";
 
-
-        // calling
-        w = w + 1;
-        // each time through the inner loop
-
+        while (serverIsRunning()){
+            w += 1;
+            waitFor(5);
+            }
+            if(!serverIsRunning()){
+                sendEmergencyText("Help",adminPhoneNumber);
+                tryServerRestart("Restarting Server",adminPhoneNumber);
+            }
         return w;
     }
 
@@ -346,7 +355,6 @@ public class WriteLoops {
 
 // nextInt is normally exclusive of the top value,
 // so add 1 to make it inclusive
-
         return this.scr += ThreadLocalRandom.current().nextInt(20, 99 + 1);
     }
 

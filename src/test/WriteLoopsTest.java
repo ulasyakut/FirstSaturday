@@ -74,14 +74,13 @@ public class WriteLoopsTest
 //        assertEquals(17, writeLoo1.byTwoTo32()); // error in source
 //    }
 
-    //@Test
-//    public void TestCountDownFrom5000()
-//    {
-//        WriteLoops writeLoo1 = new WriteLoops();
-//        assertEquals(455, writeLoo1.countDownFrom5000());
-//    }
-//
-//    @Test
+    public void TestCountDownFrom5000()
+    {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(455, writeLoo1.countDownFrom5000());
+    }
+
+    @Test
     public void TestNestedFors()
     {
         WriteLoops writeLoo1 = new WriteLoops();
