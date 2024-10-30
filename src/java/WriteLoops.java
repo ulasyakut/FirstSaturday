@@ -11,6 +11,34 @@ import java.util.concurrent.ThreadLocalRandom;
 public class WriteLoops {
 
     private static final int _3 = 3;
+    /**
+     * IGNORE the CODER behind the CURTAIN. These are the support routines to make
+     * all the examples interesting.
+     */
+    // instance variables - replace the example below with your own
+    public int x;
+    int[] threes_array = { 3, 6, 9, 12, 15, 18, 21 };
+    String voteTallies[] = { "Lincoln", "Washington", "Adams", "Lincoln", "Washington", "Adams", "Lincoln",
+            "Washington", "Adams", "Lincoln", "Washington", "Adams", "Roosevelt" };
+    int serverStatus = 5;
+    private int gps = 0;
+    private int scr = 31;
+    // private Supplier<Boolean> isSummer = () -> {
+    //     int i = 0;
+    //     return Supplier<Boolean> () -> {
+    //         i = i + 1;
+    //         return (i >= 3);
+    //     };
+    // };
+        private int summer = 0;
+
+    /**
+     * Constructor for objects of class src.main.java.WriteLoops
+     */
+    public WriteLoops() {
+        // initialise instance variables
+        x = 0;
+    }
 
     public int oneToFive() {
         int w = 0;
@@ -49,20 +77,13 @@ public class WriteLoops {
         return w;
     }
 //        //i moved on this since it says some error things
-//    public int byTwoTo32() {
-//        int w = 0;
-//        for(int i = 0;w < 32;i++){
-//            if(i % 2 == 0){
-//                w = w + 1;
-//                return i;
-//                 }       }return w;
-//        }
-//         //Write a FOR loop from 0 to 32 by 2s.
-//         //calling
-//
-//         //each time through the loop
-//
-//    }
+    public int byTwoTo32() {
+        int w = 0;
+        for(int i = 0;i <= 32;i=i+2){
+            w++;
+
+            }return w;
+        }
 
     public int countDownFrom5000() {
         int w = 0;
@@ -115,7 +136,6 @@ public class WriteLoops {
         // what's the primary difference between them?!?
     }
 
-
     public int driveHome() {
         int w = 0;
         while(!gpsCurrentLocation().equals("Home")){
@@ -131,7 +151,7 @@ public class WriteLoops {
     // is less than “highestScore” and if it is, adds “currentScore” to
     // "runningScore"
     // and then sets “currentScore” to “gameNextScore()”
-    public int checkGameScore() {
+    public boolean checkGameScore() {
         int w = 0;
         int highestScore = 236;
         int currentScore = gameNextScore();
@@ -148,7 +168,7 @@ public class WriteLoops {
             w = w + 1;
             System.out.println("------------");
         }
-        return w;
+        return w >= 3;
     }
 
     // Rewrite the previous WHILE loop as a DO..WHILE loop.
@@ -163,15 +183,10 @@ public class WriteLoops {
             runningScore = runningScore+currentScore;
             w = w + 1;
         }
-        while(currentScore<highestScore);
+        while(runningScore<highestScore);
 
-        // do your while loop here
-
-            // calling
-
-            // each time through the inner loop
-
-        return w >= 3;
+        boolean b = w >= 3;
+        return !b;
     }
 
     public int checkServerStatus() {
@@ -202,8 +217,6 @@ public class WriteLoops {
 
         return w;
     }
-
-    int[] threes_array = { 3, 6, 9, 12, 15, 18, 21 };
 
     // Foo is method that add the first 7 factors of three together and prints
     // out the sum of them all.
@@ -280,9 +293,6 @@ public class WriteLoops {
         return w;
     }
 
-    String voteTallies[] = { "Lincoln", "Washington", "Adams", "Lincoln", "Washington", "Adams", "Lincoln",
-            "Washington", "Adams", "Lincoln", "Washington", "Adams", "Roosevelt" };
-
     // Given an array voteTallies[], write a FOR loop that prints out each value in
     // the array.
     public int tallyVote1() {
@@ -312,32 +322,6 @@ public class WriteLoops {
         return w;
     }
 
-    /**
-     * CONGRATS, you've written all the code. Does it all pass their tests?!?
-     * 
-     * 
-     * If not, why not? :-)
-     * 
-     * 
-     */
-
-    /**
-     * IGNORE the CODER behind the CURTAIN. These are the support routines to make
-     * all the examples interesting.
-     */
-    // instance variables - replace the example below with your own
-    public int x;
-
-    /**
-     * Constructor for objects of class src.main.java.WriteLoops
-     */
-    public WriteLoops() {
-        // initialise instance variables
-        x = 0;
-    }
-
-    private int gps = 0;
-
     private String gpsCurrentLocation() {
         if (this.gps > 5) {
             return "Home";
@@ -348,8 +332,6 @@ public class WriteLoops {
     private void driveSomeMore() {
         this.gps += 1;
     }
-
-    private int scr = 31;
 
     private int gameNextScore() {
 
@@ -368,28 +350,19 @@ public class WriteLoops {
         }
         /* dammit, mow the yard */}
 
-    // private Supplier<Boolean> isSummer = () -> {
-    //     int i = 0;
-    //     return Supplier<Boolean> () -> {
-    //         i = i + 1;
-    //         return (i >= 3);
-    //     };
-    // };
-        private int summer = 0;
-        private boolean isSummer() {
+    private boolean isSummer() {
             if (summer == 3) {
                 return true;
             }
             summer++;
             return false;
         }
+
     private void sendEmergencyText(String mesg, String phone) {
     }
 
     private void tryServerRestart(String mesg, String phone) {
     }
-
-    int serverStatus = 5;
 
     private boolean serverIsRunning() {
         return (serverStatus < 20);
@@ -398,6 +371,23 @@ public class WriteLoops {
     private void waitFor(int interval) {
         serverStatus += interval;
     }
+    //Write a FOR loop from 0 to 32 by 2s.
+         //calling
+
+         //each time through the loop
+
+    }
 
 
-}
+/**
+     * CONGRATS, you've written all the code. Does it all pass their tests?!?
+     * 
+     * 
+     * If not, why not? :-)
+     * 
+     * 
+     */
+
+
+
+

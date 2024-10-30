@@ -67,13 +67,13 @@ public class WriteLoopsTest
     }
 
     @Test
-//    public void Test2to32()
-//    {
-//        //error should be 17?
-//        WriteLoops writeLoo1 = new WriteLoops();
-//        assertEquals(17, writeLoo1.byTwoTo32()); // error in source
-//    }
-
+    public void Test2to32()
+    {
+        //error should be 17?
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(17, writeLoo1.byTwoTo32()); // error in source
+    }
+    @Test
     public void TestCountDownFrom5000()
     {
         WriteLoops writeLoo1 = new WriteLoops();
